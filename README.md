@@ -1,2 +1,3 @@
 # nodejs-mysql-linksapp
-App to storage favorites links using NodeJS and MySQL
+
+App to storage favorite links using NodeJS, ExpressJS and MySQL
