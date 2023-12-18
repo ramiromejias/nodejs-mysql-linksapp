@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
+  <div class="container">
     <a class="navbar-brand" href="/">Favorite Links</a>
     <button
       class="navbar-toggler"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
+      data-toggle="collapse"
+      data-target="#navbarNav"
       aria-controls="navbarNav"
       aria-expanded="false"
       aria-label="Toggle navigation"
@@ -13,44 +13,36 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ml-auto">
         {{#if user}}
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
               role="button"
-              data-bs-toggle="dropdown"
+              data-toggle="dropdown"
               aria-expanded="false"
             >
               Links
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/links">All Links</a></li>
-              <li><a class="dropdown-item" href="/links/add">Add Link</a></li>
-            </ul>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/links">List All</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/links/add">Add One</a>
+            </div>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              {{user.fullname}}
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/profile">Profile</a></li>
-              <li><a class="dropdown-item" href="/logout">Logout</a></li>
-            </ul>
+          <li class="nav-item">
+            <a href="/profile" class="nav-link">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a href="/logout" class="nav-link">Logout</a>
           </li>
         {{else}}
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/signin">SignIn</a>
+            <a href="/signin" class="nav-link">SignIn</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/signup">SignUp</a>
+            <a href="/signup" class="nav-link">SignUp</a>
           </li>
         {{/if}}
       </ul>
