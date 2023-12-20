@@ -56,9 +56,8 @@ app.use((req, res, next) => {
 app.use(require("./routes/index.js"));
 app.use(require("./routes/authentication.js"));
 app.use("/links", require("./routes/links.js"));
-
-// Public
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public"))); // Public
+app.use(require("./routes/errors.js"));
 
 // Starting server
 app.listen(app.get("port"), () => {
